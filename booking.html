@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Service | Super Safi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta http-equiv="Content-Language" content="en">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav-wrapper">
+    <img src="img/logo.png" class="logo" alt="Super Safi">
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="contact-section">
+  <div class="container">
+
+    <h1 class="section-title">Book a Service</h1>
+
+<h3 class="selected-service">
+  Selected Service:
+  <span id="serviceText"></span>
+</h3>
+
+<form class="contact-form" id="bookingForm">
+
+  <label>Full Name</label>
+  <input type="text" id="customerName" placeholder="Enter your full name" required>
+
+  <label>Phone Number</label>
+  <input type="text" id="customerPhone" placeholder="Enter your phone number" required>
+
+  <label>Booking Date</label>
+  <input type="date"id="bookingDate" required>
+
+  <label>Booking Time</label>
+
+<div style="display:flex; gap:10px; align-items:center;">
+
+  <input 
+  type="number"
+  id="hour"
+  min="1"
+  max="12"
+  placeholder="HH"
+  required
+  style="width:80px;"
+  oninput="if(this.value > 12) this.value = 12"
+>
+
+<span>:</span>
+
+<input 
+  type="number"
+  id="minute"
+  min="0"
+  max="59"
+  placeholder="MM"
+  required
+  style="width:80px;"
+  oninput="if(this.value > 59) this.value = 59"
+>
+
+  <select id="period" style="width:100px;">
+    <option value="AM">AM</option>
+    <option value="PM">PM</option>
+  </select>
+
+</div>
+  <label>Address</label>
+  <textarea id="address" placeholder="Enter your address" required></textarea>
+
+  <button type="submit">Confirm Booking</button>
+
+</form>
+
+  </div>
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const serviceName = params.get("service_name");
+
+  document.getElementById("serviceText").innerText = serviceName;
+
+  document.getElementById("bookingForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    let hour = parseInt(document.getElementById("hour").value);
+let minute = document.getElementById("minute").value;
+let period = document.getElementById("period").value;
+
+if (period === "PM" && hour !== 12) {
+  hour += 12;
+}
+
+if (period === "AM" && hour === 12) {
+  hour = 0;
+}
+
+const formattedTime = `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
+
+    const bookingData = {
+      service_id: params.get("service_id"),
+      customer_name: document.getElementById("customerName").value,
+      customer_phone: document.getElementById("customerPhone").value,
+      booking_date: document.getElementById("bookingDate").value,
+      booking_time: formattedTime,
+      address: document.getElementById("address").value,
+    };
+
+    try {
+      
+      console.log(formattedTime);
+      console.log(bookingData);
+      
+        const response = await fetch("http://127.0.0.1:8000/api/guest-booking/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(bookingData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+  console.log(data);
+  window.location.href = "success.html";
+      } else {
+        alert("Error while saving booking");
+        console.log(data);
+      }
+
+    } catch(error) {
+      console.log(error);
+      alert("Server connection error");
+    }
+  });
+</script>
+
+</body>
+</html>
