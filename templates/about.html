@@ -1,36 +1,39 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>About | Super Safi</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-<!-- HEADER (نفسه المستخدم في باقي الصفحات) -->
 <header class="header">
   <div class="container nav-wrapper">
-    <img src="img/logo.png" class="logo" alt="Super Safi">
+
+    <img src="{% static 'img/logo.png' %}" class="logo" alt="Super Safi">
+
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/contact/">Contact</a>
     </nav>
+
   </div>
 </header>
 
-<!-- ABOUT -->
 <section class="about-page">
+
   <div class="container about-layout">
 
-    <!-- IMAGE -->
     <div class="about-img">
-      <img src="img/about.png" alt="About Super Safi">
+      <img src="{% static 'img/about.png' %}" alt="About Super Safi">
     </div>
 
-    <!-- TEXT -->
     <div class="about-content">
+
       <h1>About <span>Super Safi</span></h1>
 
       <p>
@@ -43,16 +46,17 @@
         We use modern equipment and trained staff to ensure the highest
         cleaning standards while maintaining efficiency and trust.
       </p>
+
     </div>
 
   </div>
 
-  <!-- CARDS -->
   <div class="about-cards container">
     <div class="about-card">Trust & Honesty</div>
     <div class="about-card">High Quality</div>
     <div class="about-card">Customer Care</div>
   </div>
+
 </section>
 
 </body>

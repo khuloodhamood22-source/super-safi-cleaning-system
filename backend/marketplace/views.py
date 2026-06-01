@@ -1,10 +1,3 @@
-from django.shortcuts import render
-
-def home(request):
-    return render(request, 'index.html')
-
-
-
 from rest_framework import generics
 from datetime import datetime, timedelta
 from .models import Service, ServiceProvider, ProviderService, Booking
@@ -15,6 +8,25 @@ from .serializers import (
     BookingSerializer
 )
 
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'index.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def services(request):
+    return render(request, 'services.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def booking(request):
+    return render(request, 'booking.html')
+
+def success(request):
+    return render(request, 'success.html')
 
 class ServiceListAPIView(generics.ListAPIView):
     queryset = Service.objects.filter(is_active=True)

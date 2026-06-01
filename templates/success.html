@@ -1,23 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booking Success | Super Safi</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
 <header class="header">
   <div class="container nav-wrapper">
-    <img src="img/logo.png" class="logo" alt="Super Safi">
+
+    <img src="{% static 'img/logo.png' %}" class="logo" alt="Super Safi">
 
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/contact/">Contact</a>
     </nav>
+
   </div>
 </header>
 
@@ -25,6 +29,7 @@
   <div class="container">
 
     <div class="success-box">
+
       <h1>Booking Submitted Successfully 🎉</h1>
 
       <p>
@@ -32,9 +37,10 @@
         Your booking request has been sent successfully.
       </p>
 
-      <a href="services.html" class="btn">
+      <a href="/services/" class="btn">
         Book Another Service
       </a>
+
     </div>
 
   </div>

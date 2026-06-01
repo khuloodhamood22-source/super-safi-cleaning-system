@@ -121,12 +121,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+
+
+# Static files
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR.parent / "css",
-    BASE_DIR.parent / "js",
-    BASE_DIR.parent / "img",
+    BASE_DIR.parent / "static",
 ]
 
 REST_FRAMEWORK = {

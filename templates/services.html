@@ -1,69 +1,85 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Super Safi | Services</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-  <header class="header">
+<header class="header">
   <div class="container nav-wrapper">
-    <img src="img/logo.png" class="logo" alt="Super Safi">
+
+    <img src="{% static 'img/logo.png' %}" class="logo" alt="Super Safi">
 
     <button class="menu-toggle" id="menuToggle">☰</button>
 
     <nav class="nav" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/contact/">Contact</a>
     </nav>
+
   </div>
 </header>
 
-  <section class="services-page">
-    <div class="container">
-      <h1>Our Services</h1>
+<section class="services-page">
+  <div class="container">
 
-      <div class="services-flex" id="servicesContainer">
-  <!-- Services will be loaded from Django API -->
-</div>
+    <h1>Our Services</h1>
+
+    <div class="services-flex" id="servicesContainer">
+      <!-- Services loaded from API -->
     </div>
-  </section>
 
-  <script>
-  const serviceImages = {
-    "Home Cleaning": "img/service-1.jpg",
-    "Apartment Cleaning": "img/service-2.jpg",
-    "Office Cleaning": "img/service-3.png",
-    "Post-Event Cleaning": "img/service-4.png"
-  };
+  </div>
+</section>
 
-  fetch("http://127.0.0.1:8000/api/services/")
-    .then(response => response.json())
-    .then(services => {
-      const container = document.getElementById("servicesContainer");
-      container.innerHTML = "";
+<script>
+const serviceImages = {
+  "Home Cleaning": "{% static 'img/service-1.jpg' %}",
+  "Apartment Cleaning": "{% static 'img/service-2.jpg' %}",
+  "Office Cleaning": "{% static 'img/service-3.png' %}",
+  "Post-Event Cleaning": "{% static 'img/service-4.png' %}"
+};
 
-      services.forEach(service => {
-        const imagePath = serviceImages[service.name] || "img/service-1.jpg";
+fetch("/api/services/")
+  .then(response => response.json())
+  .then(services => {
 
-        container.innerHTML += `
-          <div class="card">
-            <img src="${imagePath}" alt="${service.name}">
-            <h3>${service.name}</h3>
-            <p>${service.description}</p>
-<a class="btn" href="booking.html?service_id=${service.id}&service_name=${service.name}">Book Now</a>
-          </div>
-        `;
-      });
-    })
-    .catch(error => {
-      console.error("Error loading services:", error);
+    const container = document.getElementById("servicesContainer");
+    container.innerHTML = "";
+
+    services.forEach(service => {
+
+      const imagePath =
+        serviceImages[service.name] ||
+        "{% static 'img/service-1.jpg' %}";
+
+      container.innerHTML += `
+        <div class="card">
+          <img src="${imagePath}" alt="${service.name}">
+          <h3>${service.name}</h3>
+          <p>${service.description}</p>
+
+          <a class="btn"
+             href="/booking/?service_id=${service.id}&service_name=${service.name}">
+             Book Now
+          </a>
+        </div>
+      `;
     });
+
+  })
+  .catch(error => {
+    console.error("Error loading services:", error);
+  });
 </script>
 
-  <script src="js/main.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
 </body>
 </html>

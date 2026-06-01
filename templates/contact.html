@@ -1,34 +1,47 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Contact | Super Safi</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
 <header class="header">
-  <div class="container">
-    <img src="img/logo.png" class="logo">
+  <div class="container nav-wrapper">
+
+    <img src="{% static 'img/logo.png' %}" class="logo" alt="Super Safi">
 
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/contact/">Contact</a>
     </nav>
+
   </div>
 </header>
 
 <section class="contact">
+
   <h1>Contact Us</h1>
 
   <form class="contact-form">
+
     <input type="text" placeholder="Your Name">
+
     <input type="email" placeholder="Your Email">
+
     <textarea placeholder="Your Message"></textarea>
-    <button class="btn">Send</button>
+
+    <button type="submit" class="btn">
+      Send
+    </button>
+
   </form>
+
 </section>
 
 </body>
