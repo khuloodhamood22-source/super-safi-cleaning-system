@@ -1,0 +1,140 @@
+```html
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Safi | Home</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav-wrapper">
+
+        <img src="{% static 'img/logo.png' %}" class="logo" alt="Super Safi">
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav class="nav" id="navMenu">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/services/">Services</a>
+            <a href="/contact/">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <a href="/contact/" class="btn-book">Book Your Service</a>
+
+        <h1>Professional Cleaning Services</h1>
+
+        <p>Reliable and high-quality cleaning solutions</p>
+
+        <a href="/services/" class="btn">View Services</a>
+
+    </div>
+</section>
+
+<section id="about" class="about-page">
+
+    <div class="container about-layout">
+
+        <div class="about-img">
+            <img src="{% static 'img/about.png' %}" alt="About Super Safi">
+        </div>
+
+        <div class="about-content">
+
+            <h1>About <span>Super Safi</span></h1>
+
+            <p>
+                Super Safi provides professional cleaning services focused on
+                quality, reliability, and customer satisfaction.
+                Our goal is to deliver clean, safe, and comfortable spaces
+                for homes and businesses.
+            </p>
+
+            <p>
+                We use modern equipment and trained staff to ensure the highest
+                cleaning standards while maintaining efficiency and trust.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="about-cards container">
+        <div class="about-card">Trust & Honesty</div>
+        <div class="about-card">High Quality</div>
+        <div class="about-card">Customer Care</div>
+    </div>
+
+</section>
+
+<section class="services-preview">
+
+    <div class="container">
+
+        <h2>Our Services</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="{% static 'img/service-1.jpg' %}" alt="Home Cleaning">
+                <h3>Home Cleaning</h3>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'img/service-2.jpg' %}" alt="Apartment Cleaning">
+                <h3>Apartment Cleaning</h3>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'img/service-3.png' %}" alt="Office Cleaning">
+                <h3>Office Cleaning</h3>
+            </div>
+
+            <div class="card">
+                <img src="{% static 'img/service-4.png' %}" alt="Post Event Cleaning">
+                <h3>Post-Event Cleaning</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h1>Contact Us</h1>
+
+    <form class="contact-form">
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit" class="btn">
+            Send
+        </button>
+
+    </form>
+
+</section>
+
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+```

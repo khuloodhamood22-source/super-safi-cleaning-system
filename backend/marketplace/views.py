@@ -1,3 +1,10 @@
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'index.html')
+
+
+
 from rest_framework import generics
 from datetime import datetime, timedelta
 from .models import Service, ServiceProvider, ProviderService, Booking
