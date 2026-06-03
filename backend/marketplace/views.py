@@ -7,7 +7,7 @@ from .serializers import (
     ProviderServiceSerializer,
     BookingSerializer
 )
-
+from .models import ServiceProvider
 from django.shortcuts import render
 
 def home(request):
@@ -19,15 +19,51 @@ def about(request):
 def services(request):
     return render(request, 'services.html')
 
+from .models import ContactMessage
+
+
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == "POST":
+
+        ContactMessage.objects.create(
+            name=request.POST.get("name"),
+            email=request.POST.get("email"),
+            message=request.POST.get("message")
+        )
+
+        return render(request, "contact_success.html")
+
+    return render(request, "contact.html")
 
 def booking(request):
     return render(request, 'booking.html')
 
 def success(request):
     return render(request, 'success.html')
+from .models import ProviderApplication
 
+
+def provider_application(request):
+
+    if request.method == "POST":
+
+        ProviderApplication.objects.create(
+            full_name=request.POST.get("full_name"),
+            phone=request.POST.get("phone"),
+            city=request.POST.get("city"),
+            description=request.POST.get("description"),
+            experience_years=request.POST.get("experience_years") or 0,
+            commercial_register_number=request.POST.get("commercial_register_number"),
+            tax_number=request.POST.get("tax_number"),
+            professional_license_number=request.POST.get("professional_license_number"),
+            profile_image=request.FILES.get("profile_image"),
+            license_file=request.FILES.get("license_file"),
+            commercial_register_file=request.FILES.get("commercial_register_file"),
+        )
+
+        return render(request, "provider_application_success.html")
+
+    return render(request, "provider_application.html")
 class ServiceListAPIView(generics.ListAPIView):
     queryset = Service.objects.filter(is_active=True)
     serializer_class = ServiceSerializer

@@ -1,0 +1,360 @@
+Watching for file changes with StatReloader
+Internal Server Error: /provider-application/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/marketplace/views.py", line 44, in provider_application
+    return render(request, 'provider_application.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: provider_application.html
+"GET /provider-application/ HTTP/1.1" 500 73591
+Watching for file changes with StatReloader
+"GET /provider-application/ HTTP/1.1" 200 4411
+"GET /provider-application/ HTTP/1.1" 200 4400
+"GET /provider-application/ HTTP/1.1" 200 4410
+"GET /admin/marketplace/serviceprovider/add/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/marketplace/serviceprovider/add/ HTTP/1.1" 200 4237
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/marketplace/serviceprovider/add/ HTTP/1.1" 200 4407
+"GET /admin/ HTTP/1.1" 200 15040
+"POST /admin/logout/ HTTP/1.1" 200 3568
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4343
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4343
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4343
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 15040
+"GET /admin/marketplace/serviceprovider/add/ HTTP/1.1" 200 22170
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /admin/auth/user/add/?_to_field=id&_popup=1 HTTP/1.1" 200 8107
+"GET /static/admin/css/unusable_password_field.css HTTP/1.1" 200 663
+"GET /static/admin/js/unusable_password_field.js HTTP/1.1" 200 1480
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3707
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 15040
+"GET /admin/marketplace/serviceprovider/ HTTP/1.1" 200 14997
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/marketplace/serviceprovider/1/change/ HTTP/1.1" 200 22596
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET / HTTP/1.1" 200 3309
+"GET /provider-application/ HTTP/1.1" 200 4410
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET / HTTP/1.1" 200 3309
+"GET / HTTP/1.1" 200 3309
+"GET /about/ HTTP/1.1" 200 1395
+"GET /services/ HTTP/1.1" 200 1875
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1364
+"GET / HTTP/1.1" 200 3309
+"GET /about/ HTTP/1.1" 200 1395
+"GET /services/ HTTP/1.1" 200 1875
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1364
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET /contact/ HTTP/1.1" 200 1364
+"GET /contact/ HTTP/1.1" 200 1364
+"GET / HTTP/1.1" 200 3319
+"GET / HTTP/1.1" 200 3319
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET /services/ HTTP/1.1" 200 1875
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1364
+"GET /services/ HTTP/1.1" 200 1875
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /about/ HTTP/1.1" 200 1395
+"GET / HTTP/1.1" 200 3319
+"GET /about/ HTTP/1.1" 200 1395
+"GET / HTTP/1.1" 200 3319
+"GET / HTTP/1.1" 200 3319
+"GET /about/ HTTP/1.1" 200 1395
+"GET /services/ HTTP/1.1" 200 1875
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1364
+"GET / HTTP/1.1" 200 3319
+"GET /services/ HTTP/1.1" 200 1875
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET / HTTP/1.1" 200 3319
+"GET /about/ HTTP/1.1" 200 1456
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1425
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET /contact/ HTTP/1.1" 200 1425
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET /contact/ HTTP/1.1" 200 1425
+"POST /contact/ HTTP/1.1" 200 829
+"GET / HTTP/1.1" 200 3319
+"GET /admin/marketplace/contactmessage/ HTTP/1.1" 200 13451
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /contact/ HTTP/1.1" 200 1425
+"GET /contact/ HTTP/1.1" 200 1395
+"GET /provider-application/ HTTP/1.1" 200 4926
+"POST /provider-application/ HTTP/1.1" 200 4926
+"GET /admin/marketplace/serviceprovider/ HTTP/1.1" 200 14997
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/providerservice/ HTTP/1.1" 200 16212
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/serviceprovider/ HTTP/1.1" 200 14997
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/provideravailability/ HTTP/1.1" 200 14887
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/serviceprovider/ HTTP/1.1" 200 14997
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/serviceprovider/ HTTP/1.1" 200 14997
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /contact/ HTTP/1.1" 200 1195
+"GET / HTTP/1.1" 200 3319
+"GET /about/ HTTP/1.1" 200 1456
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1195
+"GET /provider-application/ HTTP/1.1" 200 4926
+"GET /provider-application/ HTTP/1.1" 200 4763
+/app/backend/marketplace/models.py changed, reloading.
+Watching for file changes with StatReloader
+/app/backend/marketplace/models.py changed, reloading.
+Watching for file changes with StatReloader
+/app/backend/marketplace/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/app/backend/marketplace/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /provider-application/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/marketplace/views.py", line 64, in provider_application
+    return render(request, "provider_application_success.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: provider_application_success.html
+"POST /provider-application/ HTTP/1.1" 500 76823
+"GET /admin/marketplace/serviceprovider/ HTTP/1.1" 200 15514
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/marketplace/providerapplication/ HTTP/1.1" 200 14223
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Internal Server Error: /provider-application/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: CHECK constraint failed: experience_years
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/backend/marketplace/views.py", line 50, in provider_application
+    ProviderApplication.objects.create(
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: CHECK constraint failed: experience_years
+"POST /provider-application/ HTTP/1.1" 500 161929
+"GET /provider-application/ HTTP/1.1" 200 4763
+"GET /contact/ HTTP/1.1" 200 1195
+"GET /provider-application/ HTTP/1.1" 200 4763
+"POST /provider-application/ HTTP/1.1" 200 1315
+"GET /admin/marketplace/providerapplication/ HTTP/1.1" 200 14676
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /admin/marketplace/providerapplication/add/ HTTP/1.1" 200 19130
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /admin/marketplace/providerapplication/ HTTP/1.1" 200 14676
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/providerapplication/2/change/ HTTP/1.1" 200 20507
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /provider_applications/profile/Final_project_n8Pi3mz.pdf
+"GET /provider_applications/profile/Final_project_n8Pi3mz.pdf HTTP/1.1" 404 3839
+/app/backend/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/backend/config/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/app/backend/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/app/backend/config/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3319
+"GET /admin/ HTTP/1.1" 200 15764
+"GET /admin/marketplace/providerapplication/ HTTP/1.1" 200 14676
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/providerapplication/2/change/ HTTP/1.1" 200 20525
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /provider-application/ HTTP/1.1" 200 4853
+"POST /provider-application/ HTTP/1.1" 200 1315
+"GET /admin/marketplace/providerapplication/ HTTP/1.1" 200 15129
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/marketplace/providerapplication/3/change/ HTTP/1.1" 200 20496
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /media/provider_applications/profile/Final_project.pdf HTTP/1.1" 200 234300
+"GET /admin/marketplace/providerapplication/3/change/ HTTP/1.1" 200 20496
+"GET / HTTP/1.1" 200 3319
+"GET /about/ HTTP/1.1" 200 1456
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1195
+"GET /provider-application/ HTTP/1.1" 200 4853
+"GET / HTTP/1.1" 200 3319
+"GET /about/ HTTP/1.1" 200 1456
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /contact/ HTTP/1.1" 200 1195
+"GET /provider-application/ HTTP/1.1" 200 4853
+"GET /contact/ HTTP/1.1" 200 1195
+"GET /provider-application/ HTTP/1.1" 200 4853
+"GET /contact/ HTTP/1.1" 200 1195
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /about/ HTTP/1.1" 200 1456
+"GET / HTTP/1.1" 200 3319
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET / HTTP/1.1" 200 3319
+"GET /contact/ HTTP/1.1" 200 1195
+"GET / HTTP/1.1" 200 3319
+"GET /contact/ HTTP/1.1" 200 1195
+"GET / HTTP/1.1" 200 3319
+"GET / HTTP/1.1" 200 3320
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /services/ HTTP/1.1" 200 1936
+"GET /api/services/ HTTP/1.1" 200 433
+"GET /booking/?service_id=2&service_name=Apartment%20Cleaning HTTP/1.1" 200 3927

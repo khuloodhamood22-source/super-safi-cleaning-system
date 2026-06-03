@@ -117,6 +117,15 @@ document.getElementById("bookingForm").addEventListener("submit", async function
   const formattedTime =
     `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
 
+   if (
+  hour < 8 ||
+  hour > 17 ||
+  (hour === 17 && parseInt(minute) > 0)
+) {
+  alert("Bookings are available only between 8:00 AM and 5:00 PM");
+  return;
+}
+
   const bookingData = {
     service_id: params.get("service_id"),
     customer_name: document.getElementById("customerName").value,

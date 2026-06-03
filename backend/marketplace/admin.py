@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from .models import ProviderApplication
 from .models import (
     Service,
     ServiceProvider,
@@ -61,3 +61,19 @@ class ReviewAdmin(admin.ModelAdmin):
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'subject', 'created_at']
     search_fields = ['name', 'email']
+
+@admin.register(ProviderApplication)
+class ProviderApplicationAdmin(admin.ModelAdmin):
+    list_display = [
+        'full_name',
+        'phone',
+        'city',
+        'experience_years',
+        'created_at'
+    ]
+
+    search_fields = [
+        'full_name',
+        'phone',
+        'city'
+    ]

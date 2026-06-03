@@ -19,6 +19,7 @@
       <a href="/about/">About</a>
       <a href="/services/">Services</a>
       <a href="/contact/">Contact</a>
+      <a href="/provider-application/">Become a Provider</a>
     </nav>
 
   </div>
@@ -26,15 +27,30 @@
 
 <section class="contact">
 
-  <h1>Contact Us</h1>
+  <form class="contact-form" method="POST">
+    {% csrf_token %}
 
-  <form class="contact-form">
+    <h1>Contact & Support</h1>
 
-    <input type="text" placeholder="Your Name">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    >
 
-    <input type="email" placeholder="Your Email">
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    >
 
-    <textarea placeholder="Your Message"></textarea>
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      required
+    ></textarea>
 
     <button type="submit" class="btn">
       Send
@@ -43,6 +59,5 @@
   </form>
 
 </section>
-
 </body>
 </html>

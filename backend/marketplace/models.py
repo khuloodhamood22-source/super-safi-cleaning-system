@@ -143,3 +143,38 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return self.subject
+    
+class ProviderApplication(models.Model):
+    full_name = models.CharField(max_length=150)
+    phone = models.CharField(max_length=20)
+    city = models.CharField(max_length=100)
+
+    description = models.TextField(blank=True)
+    experience_years = models.PositiveIntegerField(default=0)
+
+    commercial_register_number = models.CharField(max_length=100, blank=True)
+    tax_number = models.CharField(max_length=100, blank=True)
+    professional_license_number = models.CharField(max_length=100, blank=True)
+
+    profile_image = models.ImageField(
+        upload_to='provider_applications/profile/',
+        blank=True,
+        null=True
+    )
+
+    license_file = models.FileField(
+        upload_to='provider_applications/licenses/',
+        blank=True,
+        null=True
+    )
+
+    commercial_register_file = models.FileField(
+        upload_to='provider_applications/registers/',
+        blank=True,
+        null=True
+    )
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.full_name
